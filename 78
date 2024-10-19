@@ -1,0 +1,33 @@
+#include<stdio.h>
+int Is_Armstrong(int n)
+{
+	int x,sum=0;
+	x=n;
+	while(n>0)
+	{
+		sum+=(n%10)*(n%10)*(n%10);
+		n=n/10;
+	}
+	if(sum==x)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+int main()
+{
+	int n;
+	printf("Enter a number n\n");
+	scanf("%d",&n);
+	if(Is_Armstrong(n))
+	{
+		printf("%d is an armstrong ",n);
+	}
+	else
+	{
+		printf("not an armstrong");
+	}
+}
